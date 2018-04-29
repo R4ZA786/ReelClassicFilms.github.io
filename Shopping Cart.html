@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shopping Cart</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<style type="text/css">
+.auto-style1 {
+	font-size: small;
+	text-decoration: underline;
+}
+.auto-style2 {
+	font-size: large;
+	text-decoration: underline;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.auto-style3 {
+	text-decoration: underline;
+	color: #000080;
+}
+.auto-style4 {
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	text-decoration: underline;
+}
+.auto-style5 {
+	font-size: small;
+	text-decoration: underline;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.auto-style6 {
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.auto-style7 {
+	margin-left: 21px;
+}
+.auto-style11 {
+	margin-top: 160;
+}
+.auto-style14 {
+	text-decoration: underline;
+}
+.auto-style15 {
+	margin-left: 40px;
+	margin-right: 27px;
+	margin-top: 113px;
+}
+.auto-style16 {
+	margin-left: 25px;
+}
+.auto-style17 {
+	margin-left: 40px;
+}
+.auto-style18 {
+	margin-left: 40px;
+	margin-top: 0px;
+}
+.auto-style20 {
+	font-weight: normal;
+}
+.auto-style21 {
+	margin-top: 0px;
+}
+.auto-style22 {
+	color: #000000;
+}
+</style>
+<script type="text/javascript">
+<!--
+function FP_swapImgRestore() {//v1.0
+ var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
+  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } } 
+  doc.$imgSwaps=null; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+
+function FP_goToURL(url) {//v1.0
+ window.location=url;
+}
+
+function FP_changePropRestore() {//v1.0
+ var d=document,x; if(d.$cpe) { for(i=0; i<d.$cpe.length; i++) { x=d.$cpe[i];
+ if(x.v=="") x.v=""; eval("x."+x.n+"=String(x.v)"); } d.$cpe=null; }
+}
+
+function FP_changeProp() {//v1.0
+ var args=arguments,d=document,i,j,id=args[0],o=FP_getObjectByID(id),s,ao,v,x;
+ d.$cpe=new Array(); if(o) for(i=2; i<args.length; i+=2) { v=args[i+1]; s="o"; 
+ ao=args[i].split("."); for(j=0; j<ao.length; j++) { s+="."+ao[j]; if(null==eval(s)) { 
+  s=null; break; } } x=new Object; x.o=o; x.n=new Array(); x.v=new Array();
+ x.n[x.n.length]=s; eval("x.v[x.v.length]="+s); d.$cpe[d.$cpe.length]=x;
+ if(s) eval(s+"=v"); }
+}
+// -->
+</script>
+<SCRIPT SRC="language-en.js"></SCRIPT>
+<SCRIPT SRC="nopcart.js">
+  //=====================================================================||
+  //               NOP Design JavaScript Shopping Cart                   ||
+  //                                                                     ||
+  // For more information on SmartSystems, or how NOPDesign can help you ||
+  // Please visit us on the WWW at http://www.nopdesign.com              ||
+  //                                                                     ||
+  // JavaScript Shop Module, V.4.4.0                                     ||
+  //=====================================================================||
+</SCRIPT>
+</head>
+<body onload="FP_preloadImgs(/*url*/'images/ReelClassic Company Social Logo.png')">
+<div id="wrapper">
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="page-content" class="auto-style7">
+					<div id="header-wrapper">
+						<div id="header">
+							<div id="logo">
+								<h1><a href="#">Reel class</a>ic company</h1>
+								<p class="auto-style4">
+								<span class="auto-style6">
+								<span class="auto-style3">60'</span><span class="auto-style1">S, </span>
+								</span>
+								<span class="auto-style2">70'</span><span class="auto-style5">S,
+								</span><span class="auto-style2">80'</span><span class="auto-style5">S
+								</span><span class="auto-style2">A</span><span class="auto-style5">ND
+								</span><span class="auto-style2">90'</span><span class="auto-style5">S
+								</span><span class="auto-style2">F</span><span class="auto-style5">ILMS </span>
+								<span class="auto-style2">a</span><span class="auto-style5">vailable </span>
+								<span class="auto-style2">t</span><span class="auto-style5">o </span>
+								<span class="auto-style2">p</span><span class="auto-style5">urchase!</span></p>
+<!--Accessbility Font Size Changing Text Buttons-->
+<p>Font-Size:   
+<a id="linkIncrease" href="#"><b>+</b></a>  
+ 
+<a id="linkDecrease" href="#"><b>-</b></a>   
+
+<a id="linkReset" href="#">   <b>X</b></a>   
+
+</p>
+
+							</div>
+						</div>
+					</div>
+					<!-- end #header -->
+					<div id="menu-wrapper">
+						<div id="menu" style="width: 1026px">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="60s Movie.html">60's Movies</a></li>
+								<li><a href="70s Movie.html">70's Movies</a></li>
+								<li><a href="80s Movie.html">80's Movies</a></li>
+								<li><a href="90s Movie.html">90's Movies</a></li>
+								<li class="current_page_item"><a href="Shopping Cart.html">Shopping Cart</a></li>
+								<li><a href="Contact Us.html">Contact Us</a></li>
+	
+							</ul>
+						</div>
+					</div>
+					<!-- end #menu -->
+						<div id="content" style="height: 1936px">
+						<div class="post">
+							<h2 class="title" style="font-size: xx-large; color: #000080; text-decoration: underline;">
+							<strong>Classic Films shopping cart:</strong></h2>
+							<p>Below is the Shopping Cart For The Classic Films 
+							that are available within Reel Classic Company. Here 
+							you are able to choose the quantity and the 
+							different films that you would like to purchase from 
+							our website to process and go through the Checkout 
+							phase to the Payment submitting details.</p>
+							<p class="auto-style3"><strong>Feel Free To Browse 
+							Around The Site And Checkout Our Movies Before 
+							Considering Purchasing! 
+							Enjoy Our Shopping Online!</strong></p>
+														<div class="entry" style="height: 1703px">
+														<!--Shopping Cart Starts-->
+														<TABLE BORDER=0 WIDTH=90%><TR><TD ALIGN=CENTER VALIGN=TOP>
+       													 <img alt="" height="306" src="images/Planet%20Of%20The%20Apes%201968.jpg" width="224" />
+      <FONT FACE="ARIAL,HELVETICA" SIZE=2 COLOR=#663333>
+      													  <br />
+      $27.56 + S/H
+      </FONT>
+   </TD><TD VALIGN=TOP>
+      <FONT FACE="ARIAL,HELVETICA" SIZE=2 COLOR=#663333>
+        <B>The Planet Of The Apes(1968)</B>
+      </FONT>
+      <br>
+       <FONT FACE="ARIAL,HELVETICA" SIZE=2>
+       <strong>Rating: </strong>8.0/10 IMDb<br />
+	   <strong>Director:</strong> Franklin Dave Schaffner<br />
+	   <strong>Writers:</strong> Michael Wilson (screenplay), Rod Serling 
+	   (screenplay) <br />
+	   <strong>Stars: </strong>Charlton Heston, Roddy Mcdowall, Kim Hunter&nbsp;
+	   <br />
+	   <strong>Shipping:</strong> 3 - 5 days. <br />
+	   <strong>Cost:</strong> $27.56 + S/H
+      <br>
+      <!--Shopping Cart Begin-->
+      <P>
+	   <FORM NAME=order ACTION="managecart.html" onSubmit="AddToCart(this);">     
+	   Quantity: <input type=text size=2 maxlength=3 name=QUANTITY onChange='this.value=CKquantity(this.value)' value="1"/>
+       <FONT FACE="ARIAL,HELVETICA" SIZE=2>
+      <input type="image" src="images/buynow.gif" width="97" border=0 value="Add to Cart" align=top/></FONT>
+      <input type=hidden name=PRICE value="27.56"/>
+      <input type=hidden name=NAME value="Planet Of The Apes (1963)"/>
+      <input type=hidden name=ID_NUM value="FPP1"/>
+      <input type=hidden name=SHIPPING value="10.05"/>
+      </FORM>
+      <!--Shopping Cart End  -->
+      </FONT>
+   </TD></TR>
+
+   <TR><TD COLSPAN=2><HR></TD></TR>
+
+   <TR><TD ALIGN=CENTER VALIGN=TOP>
+       <img alt="" height="289" src="images/Star%20Wars%20A%20New%20Hope%201977.jpg" width="220" /><BR>
+      <FONT FACE="ARIAL,HELVETICA" SIZE=2 COLOR=#663333>
+      $41.34 + S/H
+      </FONT>
+   </TD><TD VALIGN=TOP>
+   <FONT FACE="ARIAL,HELVETICA" SIZE=2 COLOR=#663333>
+       <strong>Star Wars- Episode IV A New Hope (1977)</strong><br />
+       </font><B>
+       <FONT FACE="ARIAL,HELVETICA" SIZE=2><strong>Rating:</strong> 
+	   <span class="auto-style20">8.6/10 IMDb</span><br />
+	   <strong>Director:</strong> <span class="auto-style20">George Lucas Writer: 
+	   George Lucas </span> <strong><br />
+	   Stars:</strong></b> Mark Hamil<B><span class="auto-style20">l, 
+	   Harrison Ford, Carrie Fisher</span><br />
+	   <strong>Shipping:</strong> <span class="auto-style20">3 - 5 days </span> <br />
+	   <strong>Cost:</strong> <span class="auto-style20">$41.34 + S/H
+      </span>
+      <BR>
+      <!--Shopping Cart Begin-->
+      <P>
+      <P>
+	   <FORM NAME=order ACTION="managecart.html" onSubmit="AddToCart(this);"> 
+	   Quantity: <input type=text size=2 maxlength=3 name=QUANTITY onChange='this.value=CKquantity(this.value)' value="1">
+       <input type="image" src="images/buynow.gif" width="97" border=0 value="Add to Cart" align=top/></b></FONT><B>
+       <input type=hidden name=PRICE value="41.34"/>
+      <input type=hidden name=NAME value="Star Wars- Episode IV A New Hope (1977)"/>
+      <input type=hidden name=ID_NUM value="FGG1"/>
+      <input type=hidden name=SHIPPING value="6.95">
+      </FORM>
+      <!--Shopping Cart End  -->
+      </FONT>
+   </TD></TR>
+
+   <TR><TD COLSPAN=2><HR></TD></TR>
+
+   <TR><TD ALIGN=CENTER VALIGN=TOP>
+       <img alt="" height="297" src="images/The%20Terminator%201984.jpg" width="219" /><BR>
+      <FONT FACE="ARIAL,HELVETICA" SIZE=2 COLOR=#663333>
+      $34.45 + S/H
+      </FONT>
+   </TD><TD VALIGN=TOP>
+    <FONT FACE="ARIAL,HELVETICA" SIZE=2 COLOR=#663333>
+       <strong>The Terminator (1984)</strong><BR>
+        </font>
+       <FONT FACE="ARIAL,HELVETICA" SIZE=2>
+       <strong>Rating:</strong> 8.0/10<br />
+	   <strong>Director:</strong> 
+	   <span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+	   James Cameron<span>&nbsp;</span></span><br />
+	   <strong>Writers:</strong> 
+	   <span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+	   James Cameron, Gale Anne Hurd</span><br />
+	   <strong>Stars:</strong> 
+	   <span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+	   Arnold Schwarzenegger, Linda Hamilton, Michael Biehn<span>&nbsp;</span></span><br />
+	   <strong>Shipping:</strong> 3 - 5 days <br />
+	   <strong>Cost:</strong> $34.45 + S/H
+      <BR>
+      <!--Shopping Cart Begin-->
+      <P>
+	   <FORM NAME=order ACTION="managecart.html" onSubmit="AddToCart(this);"> 
+	   Quantity: <input type=text size=2 maxlength=3 name=QUANTITY onChange='this.value=CKquantity(this.value)' value="1"/>
+      <input type="image" src="images/buynow.gif" width="97" border=0 value="Add to Cart" align=top/></FONT>
+      <input type=hidden name=PRICE value="34.45"/>
+      <input type=hidden name=NAME value="The Terminator (1984)"/>
+      <input type=hidden name=ID_NUM value="FRG1"/>
+      <input type=hidden name=SHIPPING value="6.95"/>
+      </FORM>
+      <!--Shopping Cart End  -->
+      </FONT>
+   </TD></TR>
+
+   <TR><TD COLSPAN=2><HR></TD></TR>
+
+   <TR><TD ALIGN=CENTER VALIGN=TOP style="height: 318px">
+       <img alt="" height="307" src="images/The%20Matrix%201999.jpg" width="220" /><BR>
+      <FONT FACE="ARIAL,HELVETICA" SIZE=2 COLOR=#663333>
+      $20.67 + S/H
+      </FONT>
+   </TD><TD VALIGN=TOP style="height: 318px">
+   <FONT FACE="ARIAL,HELVETICA" SIZE=2 COLOR=#663333>
+       <strong>The Matrix (1999)</strong><BR>
+       <FONT FACE="ARIAL,HELVETICA" SIZE=2>
+       <span class="auto-style22"><strong>Rating:</strong> 8.7/10 IMDb<br />
+	   <strong>Directors:</strong> Lana Wachowski (As The Wachowski Brothers)<br />
+	   <strong>Writers:</strong> Lilly&nbsp; Wachowski
+       </span>
+       <FONT FACE="ARIAL,HELVETICA" SIZE=2 class="auto-style22">
+       (As The Wachowski Brothers) Lana Wachowski
+       <FONT FACE="ARIAL,HELVETICA" SIZE=2>
+       (As The Wachowski Brothers)</FONT></FONT><br class="auto-style22" />
+	   <span class="auto-style22"><strong>Stars:</strong> Keanu Reeves, Lawerence Fishburne ,Carrie-Anne 
+	   Moss&nbsp;
+	   
+	   <br><strong>Shipping:</strong> 3 - 5 days <br/>
+	   <strong>Cost:</strong> $20.67 + S/H
+      </span>
+      <BR>
+      <!--Shopping Cart Begin-->
+      <P>
+	   <FORM NAME=order ACTION="managecart.html" onSubmit="AddToCart(this);">
+      Quantity: 
+		   <input type=text size=2 maxlength=3 name=QUANTITY onChange='this.value=CKquantity(this.value)' value="1" style="width: 13%">
+      <input type="image" src="images/buynow.gif" width="97" border=0 value="Add to Cart" align=top/></FONT>
+      <input type=hidden name=PRICE value="20.67"/>
+      <input type=hidden name=NAME value="The Matrix (1999)"/>
+      <input type=hidden name=ID_NUM value="FBB1"/>
+      <input type=hidden name=SHIPPING value="9.95"/>
+      </FORM>
+      <!--Shopping Cart End  -->
+      </FONT>
+   </TD></TR></TABLE>
+						       								<strong><br />
+															<br />
+															<br />
+															<br />
+															<br />
+															<br />
+															<p style="height: 149px"><!--Accessbility For Text Font Colour Changing-->
+<script>
+ function myFunction1() {
+	document.body.style.backgroundColor = "black";
+	document.body.style.color="red";
+ }
+ </script>
+ <script>
+ function myFunction2() {
+	document.body.style.backgroundColor = "black";
+	document.body.style.color="orange";
+ }
+ </script>
+ <script>
+ function myFunction3() {
+	document.body.style.backgroundColor = "black";
+	document.body.style.color="blue"; }
+ </script>
+
+  <script>
+ function myFunction4() {
+	document.body.style.backgroundColor = "black";
+	document.body.style.color="green";
+ }
+ 
+  </script>
+
+
+
+								<button type="button" onclick="myFunction1()" style="width: 130px">
+								Change Colour</button>
+								<button type="button" onclick="myFunction2()">
+								Change Colour</button>
+																	
+								<button type="button" onclick="myFunction3()" class="auto-style21" style="height: 23px">
+								Change Colour</button>
+																	 <strong>
+								<button type="button" onclick="myFunction4()">
+								Change Colour</button>
+									&nbsp;
+									<br />
+<!--Accessibility For Text Size Changing-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script type="text/javascript">  
+        $(document).ready(function () {  
+            $('#linkIncrease').click(function () {  
+                modifyFontSize('increase');  
+            });  
+  
+            $('#linkDecrease').click(function () {  
+                modifyFontSize('decrease');  
+            });  
+  
+            $('#linkReset').click(function () {  
+                modifyFontSize('reset');
+            })  
+  
+            function modifyFontSize(flag) {  
+                var divElement = $('body');  
+                var currentFontSize = parseInt(divElement.css('font-size'));  
+  
+                if (flag == 'increase')  
+                    currentFontSize += 3;  
+                else if (flag == 'decrease')  
+                    currentFontSize -= 3;  
+                else  
+                    currentFontSize = 14;
+  
+                divElement.css('font-size', currentFontSize);  
+            }  
+        });  
+    </script>   
+<br />
+															<br />
+															<br />
+															<br />
+															<br />
+															<br />
+															<br />																					
+								<p><strong>Follow Us On The Following Social Media:</strong></p>
+								<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+								<a href="https://twitter.com/" class="fa fa-twitter"></a>
+								<a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+								<a href="http://instagram.com/" class="fa fa-instagram"></a>
+														
+							</div>
+						</div>
+						<div style="clear: both;">&nbsp;</div>
+					</div>
+					<!-- end #content -->
+					
+					<!-- Sidebar -->
+					<div id="sidebar" style="height: 1778px">
+						<ul>
+							<li>
+								<h2 class="auto-style3">Find us:</h2>
+								<p class="auto-style14"><strong>We are located 
+								at Jennens Road, Birmingham, B4 7PS</strong></p>
+								<p class="auto-style14"><strong>Telephone: 0121 345 6789</strong></p>
+								<p class="auto-style14"><strong>Email: 
+								Reelclassicfilms@mail.com</strong></p>
+							</li>
+							<li>
+								<h2 class="auto-style3">classic Films:</h2>
+								<ul>
+								  <li class="auto-style1" style="height: 134px">
+								  <strong>By Clicking On Each Of These Classic 
+								  Films Represented Below Navigating You To Each 
+								  Of The Movies To Allow You To Decide More 
+								  Efficiently On Which Movie You Would Like To 
+								  Purchase:<h2 class="auto-style3"> Planet of the apes:</h2>
+								  </strong></li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+								  <li>
+								  <img alt="" class="auto-style15" height="204" src="images/Planet%20Of%20The%20Apes%201968.jpg" width="168" id="img1" onclick="FP_goToURL(/*href*/'60s Movie.html');" onmouseout="FP_changePropRestore()" onmouseover="FP_changeProp(/*id*/'img1',1,'style.border','3px dashed #000080')" /></li>
+								</ul>
+							</li>
+							<li>
+								<h2 class="auto-style3">star wars :</h2>
+								<ul>
+									<li>
+									<img alt="" class="auto-style16" height="213" src="images/Star%20Wars%20A%20New%20Hope%201977.jpg" width="188" id="img2" onclick="FP_goToURL(/*href*/'70s Movie.html'); FP_changeProp(/*id*/'img2',1,'style.border','3px dashed #000080')" onmouseout="FP_changePropRestore()" /></li>
+								</ul>
+							</li>
+							<li>
+								<h2 class="auto-style3" style="height: 52px; color: #000080;">the 
+								terminator:</h2>
+							</li>
+									<li>
+									<img alt="" class="auto-style17" height="193" src="images/The%20Terminator%201984.jpg" width="158" /></li>
+								<li>
+								<h2 class="auto-style3" style="height: 52px; color: #000080;">the 
+								matrix:</h2>
+							</li>
+									<li>
+									<img alt="" class="auto-style18" height="184" src="images/The%20Matrix%201999.jpg" width="154" /><h2 class="auto-style3" style="height: 52px; color: #000080;">
+									Action Sounds:</h2>
+							</li>
+								<li style="height: 82px">
+								<ul><li class="auto-style11" style="height: 131px">
+									<audio controls style="width: 202px; height: 44px; border-color: #000080">
+                              <source src="Sounds/Theta_Sound_Music_-_Space_Warriors_(Dark_Hybrid_Action).mp3" type="audio/mpeg">
+                          Your browser does not support the audio element.
+                            </audio>
+
+								</ul>
+							</li>
+						</ul>
+</div>
+					<!-- end #sidebar -->
+				</div>
+				<div style="clear: both; height: 65px;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright &copy; Reel Classic Company 2018. All rights reserved.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
